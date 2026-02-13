@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mechanical Car Workshop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+           <img src="https://static.vecteezy.com/system/resources/previews/015/449/790/original/car-garage-premium-logo-design-automotive-repair-logo-template-with-rustic-vintage-retro-style-vector.jpg" alt="Logo">
+            SMART MECHANICAL</div>
+        <nav>
+            <a onclick="show('home')">Home</a>
+            <a onclick="show('services')">Services</a>
+            <a onclick="show('mechanics')">Mechanics</a>
+            <a onclick="show('gallery')">Gallery</a>
+            <a onclick="show('booking')">Book Services</a>
+            <a onclick="show('contact')">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="active hero">
+        <h1>Expert Car Care</h1>
+        <p>Highly Trained & Certified Mechanics</p>
+        <div class="hero-btns">
+            <button onclick="show('booking')">Book Services</button>
+            <button onclick="show('services')" class="outline">View Services</button>
+        </div>
+
+        <div class="usp">
+            <div>Certified mechanics</div>
+            <div>Advanced Diagnostics</div>
+            <div>Genuine Parts</div>
+            <div>Transparent Pricing</div>
+            <div>Fast Service</div>
+            <div>Free Inspection</div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div id="serviceList" class="cards"></div>
+        <h3>Total Amount: ₹<span id="total">0</span></h3>
+    </section>
+
+    <section id="mechanics">
+        <h2>Our Mechanics</h2>
+        <div class="filter">
+            <button onclick="filter('All')">All</button>
+            <button onclick="filter('Engine')">Engine</button>
+            <button onclick="filter('Brake')">Brake</button>
+            <button onclick="filter('AC')">AC</button>
+            <button onclick="filter('Oil Change')">Oil Change</button>
+            <button onclick="filter('Wheel Alignment')">Wheel Alignment</button>
+            <button onclick="filter('Battery Replacement')">Battery Replacement</button>
+        </div>
+        <div id="mech" class="cards"></div>
+    </section>
+
+    <section id="gallery">
+        <h2>Workshop Gallery</h2>
+        <div class="grid">
+            <img src="https://img.freepik.com/premium-photo/car-lifting-equipment-garage-being-repair-fix_103864-175.jpg"
+                alt="Workshop Image">
+            <img src="https://s3-ap-southeast-1.amazonaws.com/motoristprod/editors/images/1643078091681-how_to_choose_the_right_car_workshop_malaysia_featured.jpg"
+                alt="Workshop Image">
+            <img src="https://www.west-thames.ac.uk/images/ourcampus/motor-vehicle-workshop.jpg" alt="Workshop Image">
+            <img src="https://st.focusedcollection.com/18590116/i/1800/focused_228969744-stock-photo-interior-view-motor-vehicle-workshop.jpg"
+                alt="Workshop Image">
+            <img src="https://www.workshop-pro.co.uk/static/2596ed18761cebd8a7a1a20c0452541d/6540d/Image-2-CWE-Top-Banner.jpg"
+                alt="Workshop Image">
+            <img src="https://www.brooklands.ac.uk/wp-content/uploads/2023/04/G14A9963-scaled.jpg" alt="Workshop Image">
+            <img src="https://www.brooklands.ac.uk/wp-content/uploads/2023/04/IMG_0218-1024x768.jpg"
+                alt="Workshop Image">
+            <img src="https://www.factorfocus.ie/wp-content/uploads/2021/03/EV-Tech-Van-tools03-scaled.jpg"
+                alt="Workshop Image">
+            <img src="https://www.bacsystems.com.au/media/wysiwyg/header_gallery/Mobile-Trolley-Used-in-a-Mechanical-Workshop_1.jpg"
+                alt="Workshop Image">
+            <img src="https://wallpaperaccess.com/full/3110011.jpg" alt="Workshop Image">
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Book a Service</h2>
+        <form id="bookform">
+            <input required placeholder="Customer Name">
+            <input type="email" required placeholder="Email">
+            <input type="tel" required placeholder="Phone">
+            <input required placeholder="Car Brand">
+            <input required placeholder="Car Model">
+            <input type="date" required>
+            <select id="stype">
+                <option>Normal</option>
+                <option>Express</option>
+            </select>
+            <select id="stype">
+                <option value="" disabled selected hidden>Select Service</option>
+                <option>Engine Repair</option>
+                <option>Brake Service</option>
+                <option>Oil Change</option>
+                <option>Wheel Alignment</option>
+                <option>AC Repair</option>
+                <option>Battery Replacement</option>
+            </select>
+            <button>Confirm Booking</button>
+        </form>
+        <p id="summary"></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>📍 New Way, City</p>
+            <p>📞 9876543445</p>
+            <p>✉ workshop@mail.com</p>
+        </div>
+
+        <form id="contactForm">
+            <input required placeholder="Name">
+            <input type="email" required placeholder="Email">
+            <textarea required placeholder="Message"></textarea>
+            <button id="send" disabled>Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Smart Mechanical Car Workshop</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
